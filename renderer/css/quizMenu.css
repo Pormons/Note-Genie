@@ -1,0 +1,38 @@
+body {
+  background: rgb(33,30,78);
+  background: linear-gradient(45deg, rgba(33,30,78,1) 0%, rgba(9,9,121,1) 28%, rgba(0,212,255,1) 100%);
+}
+
+
+.main-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  align-content: center;
+  justify-items: center;
+}
+
+.box {
+  display: grid;
+  justify-items: center;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 34px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-display {
+  display: grid;
+}
+
+#scores {
+  display: flex;
+  align-items: center;
+}
+
+#scores h1 {
+  font-weight: bolder;
+  font-style: oblique;
+}

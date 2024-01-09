@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/history.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/quizReport.css">
+    <link rel="stylesheet" href="css/quizReport.css">
+  </head>
+  <body>
+    <div id="main" class="main d-flex">
+      <div id="div_prompts" class="box-header text-center">
+        <select class="dropdown" id="note-dropdown"></select>
+        <a href="index.html" class="btn btn-secondary" id="btn_back">Back</a>
+        <h2>Test History</h2>
+        <div id="history-container"></div>
+      </div>
+      <div id="report-box" class="box d-none">
+        <h2 id="history-id"></h2>
+        <table id="recordedData">
+          <thead>
+            <tr>
+                <div id="highScores">
+                  <div class="circular-progress">
+                        <span id="progress-value" class="progress-value">0%</span>
+                  </div>
+                </div>
+            </tr>
+            <tr>
+              <th>Questions</th>
+              <th>Selected Answer</th>
+            </tr>
+          </thead>
+          <tbody id="reportbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/history.js"></script>
+  </body>
+</html>

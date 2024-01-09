@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; img-src 'self' data:"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; img-src 'self' data:"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+
+    
+      <div id="login-container" class="login-container d-none">
+        <div id="login-form">
+            <form id="login" class="login">
+                <div class="container py-5 h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                            <div class="card">
+                                <div class="card-body p-5 text-center">
+                                    <div class="mb-md-5 mt-md-4 pb-5">
+                                        <img class="w-50 h-50 align-self-center mt-3" src="./images/NoteGenie.Logo.png">
+                                        <br>
+                                        <br>
+                                        <div class="form-outline form-white mb-4 input">
+                                            <input id="email" class="form-control form-control-lg" name="email"  placeholder="email"/>
+                                            <div id="invalid_email" class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-outline form-white mb-4 input">
+                                          <input id="phone" class="form-control form-control-lg" name="phone"  placeholder="phone"/>
+                                          <div id="invalid_email" class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-outline form-white mb-4 input">
+                                          <input id="fullname" class="form-control form-control-lg" name="fullname"  placeholder="fullname"/>
+                                          <div id="invalid_email" class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-outline form-white mb-4 input">
+                                          <input  id="username" class="form-control form-control-lg" name="username"  placeholder="username"/>
+                                          <div id="invalid_email" class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-outline form-white mb-4 input">
+                                          <input  id="location" class="form-control form-control-lg" name="location"  placeholder="location"/>
+                                          <div id="invalid_email" class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-outline form-white mb-4 input">
+                                          <input  id="areaname" class="form-control form-control-lg" name="areaname"  placeholder="areaname"/>
+                                          <div id="invalid_email" class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-outline form-white mb-4 input">
+                                          <input id="role" class="form-control form-control-lg" name="role"  placeholder="role"/>
+                                          <div id="invalid_email" class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-outline form-white mb-4 input">
+                                            <input type="password" id="login-password" class="form-control form-control-lg" name="password" placeholder="Password" />
+                                            <div id="invalid_password" class="invalid-feedback"></div>
+                                        </div>
+                                        <button id="loginSubmit" class="btn btn-primary btn-lg px-5" type="submit">Login</button>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0">Don't have an account? <a href="#!" id="signup" class="text fw-bold">Sign Up</a>
+                                        </p>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+          <!-- Register  -->
+        <div id="register-form" class="d-none">
+            <form id="register" class="register">
+                <div class="container py-5 h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                            <div class="card">
+                                <div class="card-body p-5 text-center">
+                                    <div class="mb-md-5 mt-md-4 pb-5">
+                                        <div class="form-outline form-white mb-4">
+                                            <input type="email" id="reg-email" name="email" class="form-control form-control-lg" placeholder="Email"/>
+                                            <div id="reg_invalid_email" class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-outline form-white mb-4">
+                                            <input type="password" id="reg-password" name="password" class="form-control form-control-lg" placeholder="Password" />
+                                            <div id="reg_invalid_password" class="invalid-feedback"></div>
+                                        </div>
+                                        <button class="btn btn-success btn-lg px-5" type="submit">Sign Up</button>
+                                        <br>
+                                        <br>
+                                        <button class="btn btn-primary btn-sm px-5" id="back" type="button">Back</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div id="main-container" class="main-container d-none">
+        <div class="full-sidebar">
+          <div class="profile-side">
+              <button  id="profile" type="button" class="btn btn-primary" title="User Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg>
+              </button>
+            <button id="addNoteButton" class="btn btn-success" title="Add New Note">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-plus" viewBox="0 0 16 16">
+                <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z"/>
+                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+              </svg>
+            </button>
+            <button id="historyBtn" class="btn btn-info" title="Quiz History">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                  <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                  <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                  <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+            </button>
+            <button id="logoutButton" class="btn btn-danger" title="Logout">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="sidebar" id="side_nav">
+            <div class="header-box">
+              <img id="sidebar-logo" class="align-self-center mt-3" src="./images/NoteGenie.Logo.png">
+            </div>
+            <ul class="notes-list" id="notes-list"></ul>
+          </div>
+        </div>
+        <div class="content">
+          <div id="noteContent" class="note-content"></div>
+        </div>
+
+
+        <!-- ChatBot -->
+        <div id="chatbox-container">
+          <button id="chatbot" class="open-chat-button toggle-chat" type="button" title="Genie Ai">
+            <img src="images/Bot.PNG" alt="Chatbot Icon" class="chat-icon" />
+          </button>
+          <div class="chat-container">
+            <div class="chat-header">
+              <img src="images/Bot.PNG" alt="Chatbot Icon" class="genie-icon" />
+              <h1>Genie Ai</h1>
+              <div id="chat-group">
+                <button id="sarcastic" class="btn" title="Jinn Sarcastic Genie">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-emoji-smile-upside-down" viewBox="0 0 16 16">
+                    <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0-1a8 8 0 1 1 0 16A8 8 0 0 1 8 0z"/>
+                    <path d="M4.285 6.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 4.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 3.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 9.5C7 8.672 6.552 8 6 8s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5zm4 0c0-.828-.448-1.5-1-1.5s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5z"/>
+                  </svg>
+                </button>
+                <button id="clearButton" class="btn clear-button" title="Clear Chat History">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                    <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="chat-body" id="chatBody">
+            </div>
+            <div class="chat-footer">
+              <input type="text" id="userInput" placeholder="Type your message..." />
+              <button id="sendButton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                  <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- USER INFO -->
+        <div id="info-background" class="d-none" aria-disabled="true">
+          <div id="popup" class="popup">
+            <form id="user-form">
+              <div id="info-header">
+                <h1>HELLO!</h1>
+                <button type="button" class="btn btn-danger" id="info-close">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                </button>
+              </div>
+              <input type="text" id="name" name="name"  disabled>
+              <input type="email" id="email" name="email"  disabled>
+              <div id="buttongroup">
+                <button type="button" class="btn btn-warning" id="edit">Edit</button>
+                <button type="submit" class="btn btn-success" id="save" disabled>Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/chatbot.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "notes_front",
+  "version": "1.0.0",
+  "description": "Notes App front end",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fermin Flauta",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^24.2.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.31.0",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
+    "electron-packager": "^17.1.2",
+    "toastify-js": "^1.12.0"
+  }
+}

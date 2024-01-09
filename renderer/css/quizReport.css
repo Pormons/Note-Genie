@@ -1,0 +1,163 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  padding: 10rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, rgba(33, 30, 78, 1) 0%, rgba(9, 9, 121, 1) 28%, rgba(0, 212, 255, 1) 100%);
+}
+.box {
+  width: 100vh;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 34px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#recordedData {
+  width: 100%;
+}
+
+th:first-child {
+  width: 70%;
+}
+
+th:last-child {
+  width: 30%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+.correct {
+  color: #28a745;
+  font-size: 12px;
+}
+
+.correct-selected {
+  color: #28a745;
+}
+
+.incorrect {
+  color: red;
+}
+
+#highScores {
+  border: none;
+  display: grid;
+  justify-items: center;
+}
+
+#loader {
+  border: 1.6rem solid rgb(255, 255, 255);
+  border-radius: 50%;
+  border-top: 1.6rem solid #56a5eb;
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
+}
+
+.gradient-1 {
+  background-image: linear-gradient(to left, #13da53, #00d3ad, #00c4f6, #00abff, #5888ff);
+}
+
+.gradient-2 {
+  background-image: linear-gradient(to left, #4113da, #006bff, #009cff, #00c5f7, #8ce7ef);
+}
+
+.gradient-3 {
+  background-image: linear-gradient(to left, #eb6bf5, #ff69a5, #ff9967, #f7ca5a, #bfef8c);
+}
+
+.gradient-4 {
+  background-image: linear-gradient(to left bottom, #736bf5, #00a3ff, #00ccff, #00e9d5, #41fe89);
+}
+
+.gradient-5 {
+  background-image: linear-gradient(to right, #6bf3f5, #00e3ff, #00c8ff, #899aff, #fe41fe);
+}
+
+.gradient-6 {
+  background-image: linear-gradient(to right, #f5a4ff, #ff7bd2, #ff4d97, #ff1b55, #e30101);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a1a1a1;
+}
+
+
+.circular-progress{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#5154ff 3.6deg, #ededed 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-progress::before{
+  content: "";
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+#progress-value{
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text{
+  font-size: 30px;
+  font-weight: 500;
+  color: #606060;
+}
+
+#outcome{
+  font-weight: 700;
+  font-size: xx-large;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
